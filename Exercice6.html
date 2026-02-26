@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma fiche</title>
+</head>
+<body>
+    <h1>Ma fiche de présentation</h1>
+    <p id="nomComplet">...</p>
+    <p id="age">...</p>
+    <p id="ville">...</p>
+    <p id="presentation">...</p>
+
+    <script>
+        // 1. Déclaration des variables
+        let prenom = "Mariem";
+        let nom = "El Amrani";
+        let age = 20;
+        let ville = "Marrakech";
+
+        // 2. Affichage du nom complet
+        document.getElementById("nomComplet").innerHTML = prenom + " " + nom;
+
+        // 3. Affichage de l'âge et de la ville
+        document.getElementById("age").innerHTML = "Âge : " + age + " ans";
+        document.getElementById("ville").innerHTML = "Ville : " + ville;
+
+        // 4. Phrase complète dans le paragraphe "présentation"
+        let phrase = `Je m'appelle ${prenom} ${nom}, j'ai ${age} ans et j'habite à ${ville}.`;
+        document.getElementById("presentation").innerHTML = phrase;
+
+        // 5. Modification dynamique du titre de la page
+        document.title = "Fiche de " + prenom;
+    </script>
+</body>
+</html>
