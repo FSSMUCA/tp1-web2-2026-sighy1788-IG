@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>TP JavaScript</title>
-  </head>
-  <body>
-    <h1>Exercice X</h1>
-    <!-- Votre contenu HTML ici -->
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 7 - Calculateur de cercle</title>
+</head>
+<body>
+    <h1>Calculatrice de cercle</h1>
+    <div id="rayon"></div>
+    <div id="perimetre"></div>
+    <div id="surface"></div>
 
     <script>
-    
+        // 1. Constante PI
+        const PI = Math.PI;
+
+        // 2. Demande du rayon et conversion en nombre
+        let rayon = parseFloat(prompt("Entrez le rayon du cercle (en cm) :"));
+
+        // Vérification simple (optionnelle)
+        if (isNaN(rayon)) {
+            rayon = 0;
+            alert("Veuillez entrer un nombre valide. La valeur 0 sera utilisée.");
+        }
+
+        // 3. Calculs
+        let perimetre = 2 * PI * rayon;
+        let surface = PI * rayon * rayon;
+
+        // 4. Affichage dans les <div> (utilisation de template literals)
+        document.getElementById("rayon").textContent = `Rayon : ${rayon} cm`;
+        document.getElementById("perimetre").textContent = `Périmètre : ${perimetre.toFixed(2)} cm²`;  // cm² selon l'énoncé
+        document.getElementById("surface").textContent = `Surface : ${surface.toFixed(2)} cm²`;
     </script>
-  </body>
+</body>
 </html>

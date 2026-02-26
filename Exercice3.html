@@ -9,7 +9,14 @@
     <!-- Votre contenu HTML ici -->
 
     <script>
-     
+      
+      const TAUX_TVA = 0.2;
+      let prixHT = 150;
+      let prixTTC = prixHT + ( TAUX_TVA * prixHT);
+
+      //Affichage avec template literals
+      console.log(`Prix HT : ${prixHT} € | TVA (20%) : ${prixTTC - prixHT} € | Prix TTC : ${prixTTC} €`);
+
      
     </script>
   </body>

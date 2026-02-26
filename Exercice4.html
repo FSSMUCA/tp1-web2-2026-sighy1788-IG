@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>TP JavaScript</title>
-  </head>
-  <body>
-    <h1>Exercice X</h1>
-    <!-- Votre contenu HTML ici -->
-
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 4 - Interaction utilisateur</title>
+</head>
+<body>
     <script>
-      // Votre code JavaScript ici
+        // 1. Demander le prénom
+        let prenom = prompt("Quel est votre prénom ?");
+
+        // 2. Demander l'âge
+        let age = prompt("Quel est votre âge ?");
+
+        // 3. Convertir l'âge en nombre
+        let ageNumber = Number(age);
+
+        // 4. Calculer l'année de naissance approximative
+        let anneeNaissance = 2025 - ageNumber;
+
+        // 5. Afficher une alerte avec le message personnalisé
+        alert(`Bonjour ${prenom} ! Vous êtes né(e) vers ${anneeNaissance}.`);
+
+        // 6. Demander si l'utilisateur veut voir les infos dans la console
+        let afficherConsole = confirm("Afficher dans la console ?");
+
+        // 7. Si OK, afficher dans la console
+        if (afficherConsole === true) {
+            console.log("Prénom :", prenom);
+            console.log("Âge :", ageNumber);
+            console.log("Année de naissance :", anneeNaissance);
+        }
     </script>
-  </body>
+</body>
 </html>
